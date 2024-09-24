@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "Panchang";
+    src: url('fonts/Panchang-Variable.eot');
+    src: url('fonts/Panchang-Variable.eot') format('embedded-opentype'),
+       url('fonts/Panchang-Variable.woff2') format('woff2'),
+       url('fonts/Panchang-Variable.woff') format('woff'),
+       url('fonts/Panchang-Variable.ttf') format('truetype');
+    /* font-weight: bold;
+    font-style: normal; */
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: url('fonts/GothamBook.eot');
+    src: url('fonts/GothamBook.eot') format('embedded-opentype'),
+        url('fonts/GothamBook.woff2') format('woff2'),
+        url('fonts/GothamBook.woff') format('woff'),
+        url('fonts/GothamBook.ttf') format('truetype'); 
+}
+
+* {
+    color: white;
+    font-family: "Panchang", sans-serif;
+}
+
+body {
+    background: #000;
+}
+
+.imageHolder {
+    background: #ff0000;
+    display: inline-flex;
+}
+
+.imageHolder img{
+    border-radius: 140px;
+}
+
+.welcome p{
+    font-weight: bolder;
+    font-size: 2.7rem;
+    width: 509;
+    padding: 0;
+}
+
+.name p{
+    font-weight: bold;
+    color: #D39AE4;
+    font-size: 4rem;
+    padding: 0;
+}
+.description p {
+    font-family: "Gotham";
+}
