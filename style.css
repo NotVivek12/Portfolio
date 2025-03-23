@@ -307,6 +307,20 @@ header {
     transform: scale(1.05);
 }
 
+/* Form Status Message Styles */
+#formStatus {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+#formStatus p {
+    margin: 0;
+    font-family: "Gotham", sans-serif;
+    font-size: 0.9rem;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .contact-item {

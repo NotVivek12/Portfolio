@@ -22,23 +22,23 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <h2>Email</h2>
-                    <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                    <p><a href="mailto:vivekjoshi82015@gmail.com">vivekjoshi82015@gmail.com</a></p>
                 </div>
                 
                 <div class="contact-item">
                     <h2>LinkedIn</h2>
-                    <p><a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></p>
+                    <p><a href="https://linkedin.com/in/vivek-upadhayay" target="_blank">linkedin.com/in/vivek-upadhayay</a></p>
                 </div>
                 
                 <div class="contact-item">
                     <h2>GitHub</h2>
-                    <p><a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+                    <p><a href="https://github.com/notvivek12" target="_blank">github.com/notvivek12</a></p>
                 </div>
             </div>
             
             <div class="contact-form">
                 <h2>Send a Message</h2>
-                <form>
+                <form id="contactForm">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -56,8 +56,59 @@
                     
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
+                <div id="formStatus" style="margin-top: 15px; text-align: center; display: none;"></div>
             </div>
         </div>
     </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const formStatus = document.getElementById('formStatus');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Replace with your Google Apps Script URL
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbyrYREugMq-cdO-6Yp7n_JJveWOfd6erdpHz_B8ijTFXnp8gbteZAW4bHuVfwf966SO/exec';
+                
+                // Show loading message
+                formStatus.style.display = 'block';
+                formStatus.innerHTML = '<p style="color: #00ffff;">Sending your message...</p>';
+                
+                // Get form data
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    message: document.getElementById('message').value
+                };
+                
+                // Send data to Google Sheets
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: JSON.stringify(formData),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Success message
+                    formStatus.innerHTML = '<p style="color: #00ffff;">Message sent successfully! Thank you for contacting me.</p>';
+                    contactForm.reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        formStatus.style.display = 'none';
+                    }, 5000);
+                })
+                .catch(error => {
+                    // Error message
+                    console.error('Error!', error.message);
+                    formStatus.innerHTML = '<p style="color: #ff6b6b;">Something went wrong. Please try again later.</p>';
+                });
+            });
+        });
+    </script>
 </body>
 </html> 
