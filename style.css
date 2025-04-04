@@ -200,7 +200,7 @@ header {
     margin-top: 15px;
 }
 
-.github-link {
+.github-link, .website-link {
     display: inline-block;
     background-image: linear-gradient(to right, rgba(0, 255, 255, 0.5), rgba(211, 154, 228, 0.5));
     color: white;
@@ -212,6 +212,11 @@ header {
 }
 
 .github-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.website-link:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -332,6 +337,14 @@ header {
         width: 90%;
         padding: 20px;
     }
+    .tech-tag {
+        margin-bottom: 10px;
+    }
+
+    .github-link {
+        margin-bottom: 10px;
+    }
+    
 
     /* Improved mobile navigation */
     header {
