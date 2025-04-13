@@ -65,6 +65,21 @@ body.content-page {
     margin: 0px;
 }
 
+header {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 1000;
+    padding: 8px 15px;
+    border-radius: 25px;
+    background: none;
+    box-shadow: none;
+}
+
 nav ul {
     display: flex;
     justify-content: center;
@@ -89,15 +104,6 @@ nav ul li a {
     white-space: nowrap;
 }
 
-nav ul li a:hover {
-    color: #D39AE4;
-    transform: translateY(-2px);
-}
-
-.description p {
-    font-family: "Gotham";
-}
-
 .main{
     display: flex;
     justify-content: center;
@@ -113,21 +119,6 @@ nav ul li a:hover {
     height: calc(100vh - 60px);
     min-height: auto;
     padding-top: 50px;
-}
-
-header {
-    position: fixed;
-    top: 10px;
-    left: 0;
-    right: 0;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    z-index: 1000;
-    padding: 8px 15px;
-    border-radius: 25px;
-    background: none;
-    box-shadow: none;
 }
 
 .header-bg {
