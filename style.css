@@ -416,4 +416,7 @@ nav ul li a {
         width: 220px;
         height: 220px;
     }
+    .contact-info {
+        width: auto;
+    }
 }
