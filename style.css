@@ -421,3 +421,8 @@ nav ul li a {
         width: auto;
     }
 }
+@media (max-width: 400px) {
+    .description p {
+        font-size: 12px;
+    }
+}
