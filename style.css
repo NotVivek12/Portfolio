@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @font-face {
     font-family: "Panchang";
     src: url('fonts/Panchang-Variable.eot');
@@ -5,8 +6,6 @@
        url('fonts/Panchang-Variable.woff2') format('woff2'),
        url('fonts/Panchang-Variable.woff') format('woff'),
        url('fonts/Panchang-Variable.ttf') format('truetype');
-    /* font-weight: bold;
-    font-style: normal; */
 }
 
 @font-face {
@@ -24,22 +23,19 @@
 }
 
 body {
-    margin: 0;padding: 0;
-    /* background: #000; */
+    margin: 0;
+    padding: 0;
     background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url(Images/bg.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    /* background-repeat: round; */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-x: hidden;
 }
 
-/* Hide scrollbar for home page */
 body.home-page {
-    overflow: hidden; /* Hide both horizontal and vertical scrollbars */
+    overflow: hidden;
 }
 
-/* Ensure content pages can scroll if needed */
 body.content-page {
     overflow-y: auto;
 }
@@ -76,7 +72,7 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-wrap: nowrap;
 }
 
 nav ul li {
@@ -90,7 +86,7 @@ nav ul li a {
     padding: 6px 10px;
     font-weight: 500;
     font-size: 0.95rem;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
 }
 
 nav ul li a:hover {
@@ -101,8 +97,8 @@ nav ul li a:hover {
 .description p {
     font-family: "Gotham";
 }
+
 .main{
-    /* margin: 19rem 0rem; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,11 +109,10 @@ nav ul li a:hover {
     padding-top: 60px;
 }
 
-/* Specific styling for home page main container */
 .home-page .main {
-    height: calc(100vh - 60px); /* Subtract the header height and padding */
-    min-height: auto; /* Override the min-height */
-    padding-top: 50px; /* Adjust this value based on your header size */
+    height: calc(100vh - 60px);
+    min-height: auto;
+    padding-top: 50px;
 }
 
 header {
@@ -131,11 +126,10 @@ header {
     z-index: 1000;
     padding: 8px 15px;
     border-radius: 25px;
-    background: none; /* Removing the default background */
-    box-shadow: none; /* Removing shadow */
+    background: none;
+    box-shadow: none;
 }
 
-/* You can add a custom header background class that you can change later */
 .header-bg {
     background-image: linear-gradient(to right, rgba(0, 255, 255,0.4), rgba(211, 154, 228, 0.4));
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -144,12 +138,12 @@ header {
 .imageHolder {
     text-align: right;
 }
+
 .description p{
     font-size: 20px;
     margin-top: 3px;
 }
 
-/* Projects Page Styles */
 .project-container {
     width: 80%;
     max-width: 1200px;
@@ -221,7 +215,6 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Contact Page Styles */
 .contact-container {
     width: 80%;
     max-width: 1200px;
@@ -312,7 +305,6 @@ header {
     transform: scale(1.05);
 }
 
-/* Form Status Message Styles */
 #formStatus {
     padding: 10px;
     border-radius: 10px;
@@ -326,7 +318,6 @@ header {
     font-size: 0.9rem;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     .contact-item {
         flex-basis: 100%;
@@ -337,6 +328,7 @@ header {
         width: 90%;
         padding: 20px;
     }
+    
     .tech-tag {
         margin-bottom: 10px;
     }
@@ -345,15 +337,13 @@ header {
         margin-bottom: 10px;
     }
     
-
-    /* Improved mobile navigation */
     header {
         width: 95%;
         padding: 3px 5px;
     }
 
     nav ul {
-        flex-direction: row; /* Keep it horizontal on tablets */
+        flex-direction: row;
         align-items: center;
         justify-content: center;
     }
@@ -367,7 +357,6 @@ header {
         padding: 4px 6px;
     }
 
-    /* Adjust image holder for mobile */
     .imageHolder {
         flex-direction: column;
         text-align: center;
@@ -386,7 +375,6 @@ header {
         font-size: 3rem;
     }
     
-    /* Adjustments for project cards */
     .project-card {
         padding: 15px;
     }
@@ -396,7 +384,6 @@ header {
     }
 }
 
-/* Small phones */
 @media (max-width: 480px) {
     header {
         width: 92%;
@@ -404,9 +391,9 @@ header {
     }
     
     nav ul {
-        flex-direction: row; /* Keep horizontal on mobile */
+        flex-direction: row;
         padding: 0;
-        justify-content: space-between; /* Space evenly */
+        justify-content: space-between;
     }
     
     nav ul li {
@@ -419,7 +406,7 @@ header {
     }
     
     .main {
-        padding-top: 40px; /* Less padding since navbar is smaller */
+        padding-top: 40px;
     }
     
     .welcome p {
